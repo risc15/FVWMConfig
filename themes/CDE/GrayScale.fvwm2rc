@@ -1,0 +1,10 @@
+# Color Scheme GrayScale
+Colorset 0 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 1 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 2 fg black, bg #c300c300c300, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 4 fg black, bg #c300c300c300, hi, sh, Plain, NoShape
+Colorset 5 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #bd00bd00bd00, hi, sh, Plain, NoShape
+Colorset 7 fg white, bg #940094009300, hi, sh, Plain, NoShape
+Colorset 8 fg white, bg #780077877787, hi, sh, Plain, NoShape

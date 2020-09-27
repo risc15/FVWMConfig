@@ -1,0 +1,10 @@
+# Color Scheme Orchid
+Colorset 0 fg white, bg #9b009b00b900, hi, sh, Plain, NoShape
+Colorset 1 fg white, bg #9b009b00b900, hi, sh, Plain, NoShape
+Colorset 2 fg black, bg #b900b900ff00, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #9b009b00b900, hi, sh, Plain, NoShape
+Colorset 4 fg black, bg #b900b900ff00, hi, sh, Plain, NoShape
+Colorset 5 fg white, bg #9b009b00b900, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #a8d2a8d2cd00, hi, sh, Plain, NoShape
+Colorset 7 fg white, bg #82188218ab00, hi, sh, Plain, NoShape
+Colorset 8 fg white, bg #9b009b00b900, hi, sh, Plain, NoShape

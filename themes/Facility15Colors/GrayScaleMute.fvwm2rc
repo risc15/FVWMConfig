@@ -1,0 +1,28 @@
+# Color Scheme GrayScaleMuted
+# Background:
+exec xsetroot -solid '#3f5469'
+
+######
+# 3: Colorsets
+#
+#   0 - Default
+#   1 - Inactive Windows
+#   2 - Active Window
+#   3 - Inactive Windows Borders
+#   4 - Active Windows Borders
+#   5 - Menu - Inactive Item
+#   6 - Menu - Active Item
+#   7 - Menu - Grayed Item
+#   8 - Menu - Title
+#  10+ Modules
+###########
+
+Colorset 0 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 1 fg black, bg #c300c300c300, hi, sh, Plain, NoShape
+Colorset 2 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 3 fg black, bg #c300c300c300, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 5 fg white, bg #780077877787, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #bd00bd00bd00, hi, sh, Plain, NoShape
+Colorset 7 fg white, bg #940094009300, hi, sh, Plain, NoShape
+Colorset 8 fg white, bg #780077877787, hi, sh, Plain, NoShape

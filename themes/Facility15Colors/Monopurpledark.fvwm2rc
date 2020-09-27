@@ -1,0 +1,23 @@
+# Color Scheme: Monopurple
+# Background:
+exec xsetroot -solid "#5B6A87"
+######
+# 3: Colorsets
+#
+#   0 - Default
+#   1 - Inactive Windows
+#   2 - Active Window
+#   3 - Inactive Windows Borders
+#   4 - Active Windows Borders
+#   5 - Menu - Inactive Item
+#   6 - Menu - Active Item
+#   7 - Menu - Grayed Item
+#   8 - Menu - Title
+#  10+ Modules
+###########
+
+Colorset 1 fg white, bg #A7A6B1, hi, sh, Plain, NoShape
+Colorset 2 fg white, bg #635E76, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #A7A6B1, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #635E76, hi, sh, Plain, NoShape
+

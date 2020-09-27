@@ -1,0 +1,23 @@
+# Color Scheme: Blueraspberry
+# Background:
+exec xsetroot -solid "#7C453B"
+
+######
+# 3: Colorsets
+#
+#   0 - Default
+#   1 - Inactive Windows
+#   2 - Active Window
+#   3 - Inactive Windows Borders
+#   4 - Active Windows Borders
+#   5 - Menu - Inactive Item
+#   6 - Menu - Active Item
+#   7 - Menu - Grayed Item
+#   8 - Menu - Title
+#  10+ Modules
+###########
+
+Colorset 1 fg white, bg #3B4651, hi, sh, Plain, NoShape
+Colorset 2 fg white, bg #758E8D, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #3B4651, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #758E8D, hi, sh, Plain, NoShape

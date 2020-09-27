@@ -1,0 +1,10 @@
+# Color Scheme Desert
+Colorset 0 fg white, bg #c200bb00a700, hi, sh, Plain, NoShape
+Colorset 1 fg white, bg #c200bb00a700, hi, sh, Plain, NoShape
+Colorset 2 fg white, bg #e500b7ae93d8, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #c200bb00a700, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #e500b7ae93d8, hi, sh, Plain, NoShape
+Colorset 5 fg white, bg #c200bb00a700, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #8c008f009800, hi, sh, Plain, NoShape
+Colorset 7 fg black, bg #fd00fd00fa00, hi, sh, Plain, NoShape
+Colorset 8 fg white, bg #c200bb00a700, hi, sh, Plain, NoShape

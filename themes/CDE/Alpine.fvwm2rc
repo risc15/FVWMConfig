@@ -1,0 +1,10 @@
+# Color Scheme Alpine
+Colorset 0 fg white, bg #7800aa00b800, hi, sh, Plain, NoShape
+Colorset 1 fg white, bg #7800aa00b800, hi, sh, Plain, NoShape
+Colorset 2 fg black, bg #af35bfa1fb00, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #7800aa00b800, hi, sh, Plain, NoShape
+Colorset 4 fg black, bg #af35bfa1fb00, hi, sh, Plain, NoShape
+Colorset 5 fg white, bg #7800aa00b800, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #7a00b900d800, hi, sh, Plain, NoShape
+Colorset 7 fg black, bg #bf00c000c500, hi, sh, Plain, NoShape
+Colorset 8 fg white, bg #7800aa00b800, hi, sh, Plain, NoShape

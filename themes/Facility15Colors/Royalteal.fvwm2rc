@@ -1,0 +1,24 @@
+# Color Scheme: Royalteal
+# Background:
+exec xsetroot -solid "#80B4A7"
+#exec fvwm-root --dither --retain-pixmap ~/.fvwm/wallpapers/INSERT_IMAGE_HERE
+
+######
+# 3: Colorsets
+#
+#   0 - Default
+#   1 - Inactive Windows
+#   2 - Active Window
+#   3 - Inactive Windows Borders
+#   4 - Active Windows Borders
+#   5 - Menu - Inactive Item
+#   6 - Menu - Active Item
+#   7 - Menu - Grayed Item
+#   8 - Menu - Title
+#  10+ Modules
+###########
+
+Colorset 1 fg #F5F4BE, bg #2B3C46, hi, sh, Plain, NoShape
+Colorset 2 fg #F5F4BE, bg #405F5D, hi, sh, Plain, NoShape
+Colorset 3 fg #F5F4BE, bg #2B3C46, hi, sh, Plain, NoShape
+Colorset 4 fg #F5F4BE, bg #405F5D, hi, sh, Plain, NoShape

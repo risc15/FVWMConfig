@@ -1,0 +1,10 @@
+# Color Scheme PBNJ
+Colorset 0 fg black, bg #d900c100b200, hi, sh, Plain, NoShape
+Colorset 1 fg black, bg #d900c100b200, hi, sh, Plain, NoShape
+Colorset 2 fg white, bg #b6005c006100, hi, sh, Plain, NoShape
+Colorset 3 fg black, bg #d900c100b200, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #b6005c006100, hi, sh, Plain, NoShape
+Colorset 5 fg black, bg #d900c100b200, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #de00a1007f00, hi, sh, Plain, NoShape
+Colorset 7 fg black, bg #f100e300d200, hi, sh, Plain, NoShape
+Colorset 8 fg black, bg #d900c100b200, hi, sh, Plain, NoShape

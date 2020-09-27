@@ -1,0 +1,10 @@
+# Color Scheme SkyRed
+Colorset 0 fg white, bg #afbdc07ac200, hi, sh, Plain, NoShape
+Colorset 1 fg white, bg #afbdc07ac200, hi, sh, Plain, NoShape
+Colorset 2 fg white, bg #cc0068006f00, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #afbdc07ac200, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #cc0068006f00, hi, sh, Plain, NoShape
+Colorset 5 fg white, bg #afbdc07ac200, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #6d00a700b400, hi, sh, Plain, NoShape
+Colorset 7 fg black, bg #e100eb00e1c8, hi, sh, Plain, NoShape
+Colorset 8 fg white, bg #afbdc07ac200, hi, sh, Plain, NoShape
