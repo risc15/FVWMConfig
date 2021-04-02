@@ -1,6 +1,6 @@
-# This is my config file.
+# This is my config file used in FreeBSD. If under a different O/S, change the default program paths.
 
-################################################
+#=====================================================================
 # This config file is organized as follows:
 #
 #	0: Environment Variables
@@ -12,11 +12,11 @@
 #	6: Decor
 #	7: Modules
 #
-################################################
+#=====================================================================
 
-##########################################################################################################
+#=====================================================================
 # Environment Variables
-##########################################################################################################
+#=====================================================================
 
 # Important Directories:
 SetEnv fvwm_icons $[FVWM_USERDIR]/icons
@@ -36,13 +36,12 @@ SetEnv soundStart ~/.fvwm/sounds/os/default/startup.ogg
 SetEnv soundOpen ~/.fvwm/sounds/os/default/openwindow.ogg
 SetEnv soundClose ~/.fvwm/sounds/os/default/close.ogg
 
-########
+
 # Image Path
-# This is wehre FVWM will look for images (icons):
-########
+# This is where FVWM will look for images (icons):
 ImagePath [fvwm_icons]: [fvwm_icons];.svg[fvwm_wallpapers]:+
 
-################################################
+#=====================================================================
 # 1: Functions
 # Functions are a way to string a series of 
 # commands together to preform a given task.
@@ -54,26 +53,26 @@ ImagePath [fvwm_icons]: [fvwm_icons];.svg[fvwm_wallpapers]:+
 # + D (Action to happen on a mouse Double click)
 # + H (Action to happen on a mouse Hold)
 # + M (Action to happen on a mouse Motion)
-################################################
+#=====================================================================
 
-########
+#===============================
 # Start Function
 # This  function is run right after fvwm is done reading the config file.
 # This is needed to start modules.
-########
+#===============================
 DestroyFunc StartFunction
 AddToFunc StartFunction
 + I Module FvwmButtons
-+ I Module FvwmButtons TaskBar
 + I Module FvwmIconMan
 + I Module FvwmPager 0
 + I Module FvwmIconBox
 + I Exec exec mplayer $[soundStart]
 
-
+#===============================
 # IconManClick
 #
 # This function is run from FvwmIconMan when the button is clicked.
+#===============================
 DestroyFunc IconManClick
 AddToFunc   IconManClick
 + I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
@@ -84,37 +83,39 @@ AddToFunc   IconManClick
 + I ThisWindow (AcceptsFocus) FlipFocus
 + I Exec exec mplayer $[soundOpen]
 
+#===============================
 # LeftButtonOps
 # When clicking on the left-most button on the titlebar, a single
 # click will open the window menu and a double-click will close
 # the window.
+#===============================
 DestroyFunc LeftButtonOps
 AddToFunc LeftButtonOps
 + C Menu MenuWindowOps
 + D Close
 + D Exec exec mplayer $[soundClose]
 
-##########################################################################################################
+#=====================================================================
 # 2: Styles
 # Styles are per window settings that can be 
 # applied to all, different collections, or a 
 # single window.
-##########################################################################################################
+#=====================================================================
 
-########
+#===============================
 # Virtual Desktop Settings
-########
+#===============================
 DesktopSize 2x2
 DesktopName 0 Desktops
 
-########
+#===============================
 # All Window Settings
-########
+#===============================
 
 # Percentage the screen will pan over when the mouse reaches the side:
 EdgeScroll 100 100
 # How much resistance or time before the scroll triggers:
-EdgeResistance 200
+EdgeResistance 400
 # How many pixels thick the border around the root window and the edge scroll effect will take place:
 EdgeThickness 1
 # Reserves space along the edges of the screen that will not be covered by windows:
@@ -143,9 +144,9 @@ Style "*" Colorset 1, \
 Style "*" Icon ~/.fvwm/icons/Irix-theme/empty_icon.png
 Style "*" IconSize 64 64
 
-########
+#===============================
 # Mouse and Focus Behavior
-########
+#===============================
 # Time in milliseconds between pushing the mouse button and realeasing that FVWM will consider a click:
 ClickTime 250
 # The number of pixels the mouse must move before FVWM will consider that action a move:
@@ -153,28 +154,28 @@ MoveThreshold 3
 # This style applies to every window due to the wildcard (*):
 Style * SloppyFocus, MouseFocusClickRaises
 
-########
+#===============================
 # Default Font
-########
-DefaultFont "xft:DejaVuSerif:size=9:Italic:antialias=True"
+#===============================
+#DefaultFont "SGI Screen [SGI]:Regular:size=10:antialias=True"
 
-########
+#===============================
 # Pager Style
-########
+#===============================
 Style FvwmPager
 *FvwmPager: Rows 1
 *FvwmPager: Columns 1
 
-########
+#===============================
 # Main Panel Style
 # prepend "!" before a word to disable.
 # Ex: !Title to disable button panel title.
 # Add NeverFocus to disable focus.
-########
-Style FvwmButtons Sticky, Title, Borders, Centered
-Style TaskBar Sticky, !Title, !Borders, Centered
+#===============================
+Style FvwmButtons Sticky, !Title, !Borders, Centered
+#Style TaskBar Sticky, !Title, !Borders, Centered
 
-##########################################################################################################
+#=====================================================================
 # 3: Colorsets
 # A colorset is a collection of colors: foreground (fg), background (bg), hilight (hi),
 # and shade (sh). The foreground is the color of the text, background is the color
@@ -182,7 +183,7 @@ Style TaskBar Sticky, !Title, !Borders, Centered
 # around the border. This causes a raised or sunk look, like a button. Besides just
 # setting the color, Colorsets can use pixmaps, gradients, shape masks, and be
 # pseudo-transparent.
-##########################################################################################################
+#=====================================================================
 
 #   1 - Inactive Windows 
 #   2 - Active Window
@@ -199,17 +200,17 @@ Style TaskBar Sticky, !Title, !Borders, Centered
 #Colorset 3 fg white, bg #afbdc07ac200
 #Colorset 4 fg white, bg #cc0068006f00
 
-##########################################################################################################
+#=====================================================================
 # 4: Menus
 # Menus are lists you can pop up from a binding or hook it to a start menu on a panel.
 # Menus can be used to list programs or even be created dynamically so you can list
 # the contents of a directory, a recent applications menu, etc.
-##########################################################################################################
+#=====================================================================
 
-########
+#===============================
 # Root Menu
 # The menu that pops up when left-clicking on the root window (desktop).
-########
+#===============================
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Root Menu" Title
 + "Terminal" Exec exec $[fvwm_terminal]
@@ -220,27 +221,27 @@ AddToMenu MenuFvwmRoot "Root Menu" Title
 + "Restart" Restart
 + "Quit" Module FvwmScript FvwmScript-ConfirmQuit
 
-########
+#===============================
 # Theme Pop-up Menu
-########
+#===============================
 DestroyMenu ThemeMenu
 AddToMenu ThemeMenu "Window Themes" Title
 + "CDE" Popup CdeColorMenu
 + "Facility15" Popup F15ColorMenu
 
-########
+#===============================
 # CDE Colors Pop-up Menu
 # This menu will read the file that contains the Colorset definitions when seleted and give you
 # a way to switch between the color themes.
-########
+#===============================
 DestroyMenu CdeColorMenu
 AddToMenu CdeColorMenu "CDE" Title
 PipeRead 'for i in ~/.fvwm/themes/CDE/*.fvwm2rc; do \
   echo "AddToMenu CdeColorMenu $(basename -s .fvwm2rc $i) Read $i"; done'
 
-########
+#===============================
 # Facility 15 Colors Pop-up Menu
-########
+#===============================
 DestroyMenu F15ColorMenu
 AddToMenu F15ColorMenu "Facility 15" Title
 PipeRead 'for i in ~/.fvwm/themes/Facility15Colors/*.fvwm2rc; do \
@@ -248,9 +249,9 @@ PipeRead 'for i in ~/.fvwm/themes/Facility15Colors/*.fvwm2rc; do \
 
 
 
-########
+#===============================
 # Menu Window Operations
-########
+#===============================
 DestroyMenu MenuWindowOps
 AddToMenu   MenuWindowOps
 + "Move"      Move
@@ -262,32 +263,40 @@ AddToMenu   MenuWindowOps
 + "" Nop
 + "Close"     Close
 
-########
+#===============================
 # Menu Programs
 # Provides the user with commonly used programs. Common to me, anyway.
 # Pops up when clicking on root window.
-########
+#===============================
 DestroyMenu MenuPrograms
 AddToMenu MenuPrograms "Programs" Title
 + "File Manager" Exec exec $[fvwm_filemanager]
 + "" Nop
++ "Games" Popup GamesAppMenu
 + "Internet" Popup InternetAppMenu
 + "Multimedia" Popup MultimediaAppMenu
 + "Office" Popup OfficeAppMenu
 + "Tools" Popup ToolsAppMenu
 
+#===============================
+# Game Applications Pop-up Menu
+#===============================
+DestroyMenu GamesAppMenu
+AddToMenu GamesAppMenu "Games" Title
++ "Retro Arch" Exec exec retroarch
 
-########
+#===============================
 # Internet Applications Pop-up Menu
-########
+#===============================
 DestroyMenu InternetAppMenu
 AddToMenu InternetAppMenu "Internet" Title
 + "IRC" Exec exec $[fvwm_irc]
 + "Web Browser" Exec exec $[fvwm_webbrowser]
++ "Bitcoin Core" Exec exec bitcoin-qt
 
-########
+#===============================
 # Multimedia Applications Pop-up Menu
-########
+#===============================
 DestroyMenu MultimediaAppMenu
 AddToMenu MultimediaAppMenu "Multimedia" Title
 + "Aseprite" Exec exec aseprite
@@ -296,25 +305,27 @@ AddToMenu MultimediaAppMenu "Multimedia" Title
 + "Gimp" Exec exec gimp
 + "VLC" Exec exec vlc
 
-########
+#===============================
 # Office Applications Pop-up Menu
-########
+#===============================
 DestroyMenu OfficeAppMenu
 AddToMenu OfficeAppMenu "Office" Title
++ "Atom IDE" Exec exec atom
 + "Calculator" Exec exec xcalc
 + "Calendar" Exec exec xcalendar
 + "Eclipse IDE" Exec exec eclipse
++ "Emacs" Exec exec emacs
 + "XFW" Exec exec xfw
 
-########
+#===============================
 # Utility Applications Pop-up Menu
-########
+#===============================
 DestroyMenu ToolsAppMenu
 AddToMenu ToolsAppMenu "Tools" Title
 + "Wireshark" Exec exec wireshark
 + "Screenshot" Exec exec scrot
 
-##########################################################################################################
+#=====================================================================
 # 5: Bindings
 # Bindings are actions/functions that can be 
 # triggered by hitting a key, key combination, 
@@ -338,20 +349,21 @@ AddToMenu ToolsAppMenu "Tools" Title
 #
 # Key {(window)} [key] [Context] [Modifier] [Action]
 # Mouse {(window)} [button] [Context] [Modifier] [Action]
-##########################################################################################################
+#=====================================================================
+
 Mouse 1 4 A Iconify
 Mouse 1 2 A Maximize
 Mouse 1 R A Menu MenuFvwmRoot
 Mouse 1 I A Iconify
-#Mouse 1 A N exec mplayer ~/.fvwm/sounds/os/default/click1.ogg
 
 #Adds the ability to double-click on the left-most button to close a window.
 #Single-click opens the MenuWindowOps.
 Mouse 1 1 A LeftButtonOps
-##########################################################################################################
+
+#=====================================================================
 # 6: Decor
 # This section defines how the windows look. 
-##########################################################################################################
+#=====================================================================
 
 AddToDecor CDEDecor
 + TitleStyle    AllInactive -- Raised
@@ -372,21 +384,23 @@ AddToDecor CDEDecor
 
 + BorderStyle	Simple
 
-##########################################################################################################
+#=====================================================================
 # 7: Modules
 # Fvwm has various modules that can be used to 
 # create custom panels, docks, task managers,
 # desktop switchers and more.
-##########################################################################################################
+#=====================================================================
 
-########
+#===============================
 # Fvwm Buttons - Main Panel
-########
+#===============================
 DestroyModuleConfig FvwmButtons:*
 *FvwmButtons: Colorset 2
-*FvwmButtons: Rows 8
-*FvwmButtons: Columns 4
+*FvwmButtons: Rows 1
+*FvwmButtons: Columns 12
 *FvwmButtons: Frame 3
+*FvwmButtons: Geometry +480-0
+
 *FvwmButtons: (1x1, Swallow (UseOld) FvwmPager Nop)
 *FvwmButtons: (1x1, Title "Web Browser", Icon $[fvwm_icons]/Irix-theme/netscape.png, Action (Mouse1) Exec $[fvwm_webbrowser])
 *FvwmButtons: (1x1, Title "File Manager", Icon $[fvwm_icons]/Irix-theme/newfoldertwo.png, Action (Mouse1) Exec $[fvwm_filemanager])
@@ -395,28 +409,33 @@ DestroyModuleConfig FvwmButtons:*
 *FvwmButtons: (1x1, Title "Mail", Icon $[fvwm_icons]/Irix-theme/mail.png, Action (Mouse1) Exec $[fvwm_mail])
 *FvwmButtons: (1x1, Title "Volume", Icon $[fvwm_icons]/Irix-theme/noises.png, Action (Mouse1) Exec xmmix)
 *FvwmButtons: (1x1, Title "Exit", Icon $[fvwm_icons]/Irix-theme/GTFO.png, Action (Mouse1) Module FvwmScript FvwmScript-ConfirmQuit)
-*FvwmButtons: (4x2, Swallow urxvt 'Exec urxvt &')
+*FvwmButtons: (4x1, Swallow (UseOld) FvwmIconMan Nop)
 
+#===============================
 # FVWM Task Bar
-DestroyModuleConfig TaskBar:*
-*TaskBar: Colorset 2
-*TaskBar: Geometry 1920x32+0-0
-*TaskBar: Rows 1
-*TaskBar: Columns 16
-*TaskBar: Frame 3
-*TaskBar: (14x1, Swallow (UseOld) FvwmIconMan Nop)
-*TaskBar: (2x1, Swallow xclock 'Exec xclock -digital -chime -render -face DejaVuSerif:size=11:Italic:antialias=True &')
+#===============================
+#DestroyModuleConfig TaskBar:*
+#*FvwmTaskBar: Colorset 1
+#*FvwmTaskBar: IconColorset 1
+#*FvwmTaskBar: FocusColorset 1
+#*FvwmTaskBar: TipsColorset 1
+#*TaskBar: Geometry 1920x32+0-0
+#*TaskBar: Rows 1
+#*TaskBar: Columns 16
+#*TaskBar: Frame 3
+#*TaskBar: (14x1, Swallow (UseOld) FvwmIconMan Nop)
+#*TaskBar: (2x1, Swallow xclock 'Exec xclock -digital -chime -render -face 
 
-
-########
+#===============================
 # Fvwm Pager
-########
+#===============================
 DestroyModuleConfig FvwmPager:*
 *FvwmPager: ButtonGeometry 120x120
+*FvwmPagerBack #c300c300c300
 
-########
+#===============================
 # Fvwm Icon Manager
-########
+#===============================
 DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: UseWinList true
 #*FvwmIconMan: ButtonGeometry 120x20
@@ -426,9 +445,7 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: Format "%t"
 *FvwmIconMan: Action Mouse 0 A ret
 *FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
-# *FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
 *FvwmIconMan: Resolution global
 *FvwmIconMan: Tips needed
 *FvwmIconMan: Sort id
 *FvwmIconMan: Dontshow FvwmButtons
-#*FvwmIconMan: Dontshow FvwmIconMan

@@ -1,6 +1,6 @@
 # Color Scheme GrayScaleMuted
 # Background:
-exec xsetroot -solid '#3f5469'
+exec xsetroot -bg '#3f5469' -fg '#1f3449' -mod 16 16
 
 ######
 # 3: Colorsets
