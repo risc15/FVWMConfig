@@ -36,7 +36,6 @@ SetEnv soundStart ~/.fvwm/sounds/os/default/startup.ogg
 SetEnv soundOpen ~/.fvwm/sounds/os/default/openwindow.ogg
 SetEnv soundClose ~/.fvwm/sounds/os/default/close.ogg
 
-
 # Image Path
 # This is where FVWM will look for images (icons):
 ImagePath [fvwm_icons]: [fvwm_icons];.svg[fvwm_wallpapers]:+
@@ -115,7 +114,7 @@ DesktopName 0 Desktops
 # Percentage the screen will pan over when the mouse reaches the side:
 EdgeScroll 100 100
 # How much resistance or time before the scroll triggers:
-EdgeResistance 400
+EdgeResistance 450
 # How many pixels thick the border around the root window and the edge scroll effect will take place:
 EdgeThickness 1
 # Reserves space along the edges of the screen that will not be covered by windows:
@@ -135,11 +134,11 @@ Style "*" DecorateTransient, StackTransientParent
 Style "*"!FPGrabFocusTransient, FPReleaseFocusTransient
 Style "*" Colorset 1, \
 	HilightColorset 2, \
-        BorderColorset 3, \
+  BorderColorset 3, \
 	HilightBorderColorset 4, \
-        BorderWidth 6, HandleWidth 6, \
-        MWMBorder, DepressableBorder, \
-        MWMButtons, UseDecor CDEDecor, \
+  BorderWidth 6, HandleWidth 6, \
+  MWMBorder, DepressableBorder, \
+  MWMButtons, UseDecor CDEDecor, \
 	Emulate Mwm
 Style "*" Icon ~/.fvwm/icons/Irix-theme/empty_icon.png
 Style "*" IconSize 64 64

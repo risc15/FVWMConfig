@@ -1,7 +1,7 @@
 # Color Scheme GrayScale
 # Background:
 # exec xsetroot -solid "cadetblue"
-exec fvwm-root --dither --retain-pixmap ~/.fvwm/wallpapers/pictures/pory_file_found_blu.png
+exec fvwm-root --dither --retain-pixmap ~/.fvwm/wallpapers/pictures/dune.png
 Colorset 0 fg white, bg #780077877787, hi, sh, Plain, NoShape
 Colorset 1 fg white, bg #780077877787, hi, sh, Plain, NoShape
 Colorset 2 fg black, bg #c300c300c300, hi, sh, Plain, NoShape
